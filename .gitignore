@@ -1,0 +1,5 @@
+node_modules
+typings
+wwwroot/back/
+wwwroot/middle/
+wwwroot/public/js
