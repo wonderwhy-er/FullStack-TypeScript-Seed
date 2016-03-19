@@ -14,10 +14,10 @@ This is seed project for my "living the dream" full stack typescript application
 - Currently tests run in command line and run for middle/backend code, want to setup front end unit tests as well(aka runnable in browser)
 - Test coverage with something like [istanbul.js](https://github.com/gotwarlost/istanbul) that plays well with TypeScript/Unit/BDD
 - May be add [PouchDB](https://github.com/pouchdb/pouchdb)/ServiceWorker to allow app work offline out of the gate [like here](https://github.com/wonderwhy-er/offline-first-seed)
-
+- May be add Jade loader to webpack allowing server and client reusing same templates 
 
 # What it won't have
-- Any front-end frame work, you just add one you want(Angular, React(will need additional work I guess, JSX and stuff), BackBone etc)
+- Any front-end framework, you just add one you want(Angular, React(will need additional work I guess, JSX and stuff), BackBone etc)
 - Any CSS stuff as you can add it yourself too be it PostCSS/LESS/SASS etc
 
 # Usage
@@ -32,26 +32,26 @@ To start server and gulp/webpack watchers
 ```bash
 gulp
 ```
-Now go to [localhost:3002](http://localhost:3002/) to see the app
-You will see hellows from server and client code in browser
-Also hello in console too 
+Now go to [localhost:3002](http://localhost:3002/) to see the app.
+You will see hello from server and client code in browser.
+Also hello in console too.
 
 To run unit tests 
 ```bash
 gulp test
 ```
 
-There is also a watcher to rerun tests if files change 
+There is also a watcher to rerun tests if files change. 
 ```bash
 gulp testWatch
 ```
 
-Example of adding new module
+Example of adding new module.
 ```bash
 npm install underscore.string --save
 typings install underscore.string --save --ambient
 ```
-Then just require it in your code
+Then just require it in your code.
 
 # Project structure and decisions
 Most magic is in gulpfile.js
@@ -91,12 +91,12 @@ It watches back, middle, front folders and on changes compiles code for those.
 
 For server we compile TypeScript using typescript compiler to commonjs format(aka many files are generated)
 
-For browser we compile TypeScript to AMD format using WebPack and ts-loader
-WebPack handles our CommonJS style TypeScript dependencies including one from node_modules and bundles + source maps are generated
+For browser we compile TypeScript to AMD format using WebPack and ts-loader. 
+WebPack handles our CommonJS style TypeScript dependencies including one from node_modules and bundles + source maps are generated.
 
 End result is that in middle folder we have code used on server and client. 
 But its compiled differently to client and server. 
-Still considering source maps we can debug it as TypeScript which results in experiance of having same code on server and client
+Still considering source maps we can debug it as TypeScript which results in experiance of having same code on server and client.
 
 # Unit tests
 Can be stored anywhere in the src folder with names *.test.ts
