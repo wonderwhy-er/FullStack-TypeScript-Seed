@@ -2,10 +2,9 @@
   "compilerOptions": {
     "module": "commonjs",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es2015"
   },
   "files": [
-    "src/front/client.ts",
-    "typings/main.d.ts"
+    "src/front/client.ts"
   ]
 }

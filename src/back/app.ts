@@ -1,9 +1,7 @@
-/// <reference path="../../typings/main.d.ts" />
-import http = require('http');
+import * as http from  'http';
 
-import express = require('express');
+import * as express from  'express';
 import path = require('path');
-import favicon = require('serve-favicon');
 import cookieParser = require('cookie-parser');
 import bodyParser = require('body-parser');
 

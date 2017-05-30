@@ -63,6 +63,7 @@ gulp.task('compileServer', function () {
 
 gulp.task('compileClient', function (callback) {
     var myConfig = Object.create(webpackConfig);
+    console.log(myConfig.resolve);
     webpack(myConfig, function (err, stats) {
         if (err) throw new gutil.PluginError("webpack:build", err);
         gutil.log("[webpack:build]", stats.toString({
